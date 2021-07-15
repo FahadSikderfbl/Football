@@ -1,0 +1,345 @@
+
+/* ====== 1440 and 575px ===========*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@700&display=swap');
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/*============================= Banner Section =================================*/
+
+
+#Banner{
+    background-color: #2D25A0;
+}
+
+#Banner .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+#Banner .main-heading{
+    margin: 207px 0px 173px 156px;
+}
+
+#Banner h1{
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: bold;
+    margin: 0px 0px 27px 0px;
+    animation-name: mainheader;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes mainheader{
+    from{
+        margin-left: -100px;
+        opacity: 0;
+    }
+    to{
+        margin-left:0px;
+        opacity: 1;
+    }
+}
+
+#Banner img{
+    margin: 153px 0px 86px 45px;
+    height: 438px;
+    width: 556px;
+    animation-name:banner-img;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes banner-img{
+    0%{
+        transform: scale(.9);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+#Banner .watch-live{
+    background-color: var(--background-color);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+  
+    background-color: #E02C6D;
+    --accent-color: #0AF;
+}
+
+#Banner .watch-live::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+  
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+  
+#Banner .watch-live:hover::before,
+#Banner .watch-live:focus::before {
+    transform: scaleX(1);
+}
+  
+#Banner .watch-live {
+    transition: color 3000ms ease-in-out;
+    z-index: 1;
+}
+  
+  
+#Banner .watch-live:hover,
+#Banner .watch-live:focus {
+    color: white;
+}
+
+#Banner .watch-live{
+    color: #ffffff;
+    padding: 10px 14px 13px 15px;
+}
+
+#Banner .watch-live .right-arrow{
+    height: 20px;
+    width: auto;
+    margin: 3px 0px -5px 10px;
+}
+
+
+
+/*============================= PLayers Section ==========================*/
+
+
+#Players{
+    margin-top: 70px;
+}
+
+#Players .container{
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 35px;
+}
+
+#Players .card{
+    height: 474px;
+    width: 330px;
+    margin-left: 10px;
+    padding: 15px;
+    box-shadow:-1px 10px 80px -15px rgb(0 0 0 / 30%);
+    transition: 1s;
+}
+
+#Players .card:hover{
+    transform: scale(1.1);
+}
+
+#Players .card img{
+    height: 278px;
+    width: 100%;
+}
+
+#Players .card h3{
+    font-size: 30px;
+}
+
+#Players .card p{
+    line-height: 25px;
+    word-spacing: 3px;
+}
+
+
+/*============================= Blog Section ==========================*/
+
+
+#Blog{
+    margin-top: 100px;
+    padding: 100px 50px;
+    background-color:#2D25A0 ;
+}
+
+#Blog .container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Blog h2{
+    margin: 0 auto;
+
+}
+
+#Blog .blog-text{
+    margin-top: 30px;
+}
+
+
+
+
+/*=========================== Footer Section ==================================*/
+
+#Footer{
+    margin: 100px 0px 100px 0px;
+}
+
+#Footer .container{
+    width: 80%;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#Footer .license-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Footer .logo{}
+
+#Footer .logo img{
+    height: 80px;
+    width: auto;
+}
+
+#Footer .icons{
+    margin: 20px 0px 0px 0px;
+}
+
+#Footer .icons img{
+    padding: 5px;
+    height: 30px;
+    width: auto;
+}
+
+#Footer .license {
+    margin: 0px 0px 20px 0px;
+}
+
+#Footer .license p{
+    font-weight: bold;
+}
+
+#Footer .license p span{
+    margin: 19px 0px 0px 0px;
+}
+
+#Footer .ticket-area{
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Footer .ticket-area h3{
+    font-size: 35px;
+    margin: 0px 0px 0px 0px;
+}
+
+#Footer .ticket-area p{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#Footer .ticket-area form{}
+
+#Footer .ticket-area form fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+#Footer .ticket-area form fieldset input{
+    padding: 5px 100px;
+    margin: 10px 0px;
+}
+
+
+
+
+
+/*=================== Responsive Part ============================*/
+
+
+
+@media (min-width:0px) and (max-width:575px){
+
+    #Banner .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #Banner .container .main-heading {
+        margin:112px 66px 0px 16px;
+    }
+
+    #Banner .container .main-heading h1{
+        font-size: 50px;
+    }
+
+    #Banner .watch-live{
+        padding: 10px 30px;
+        font-size: 1.5em;
+    }
+
+    #Banner img{
+        margin: 153px 0px 86px 15px;
+        height: 90%;
+        width: 90%;
+    }
+
+    #Players .container{
+        grid-template-columns: 1fr;
+    }
+
+    #Players .card{
+        margin: 0 auto;
+    }
+
+    #Footer .container{
+        grid-template-columns: 1fr;
+    }
+
+    #Footer .ticket-area{
+        margin-top: 50px;
+
+    }
+
+    #Footer .ticket-area form fieldset input{
+        padding: 6px 45px;
+        margin: 20px 0px;
+    }
+}
+
